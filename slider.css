@@ -1,0 +1,112 @@
+.slider-container {
+  position: relative;
+  padding-top: 15px;
+  width: 100%;
+}
+
+.slider-container .slider-min-label, .slider-container .slider-max-label, .slider-container .slider-value-label {
+  font-size: 15px;
+  color: #727272;
+  position: absolute;
+  top: 0;
+}
+
+.slider-container .slider-min-label {
+  left: 0;
+}
+
+.slider-container .slider-max-label {
+  right: 0;
+}
+
+.slider-container .slider-value-label {
+  font-size: 20px;
+  color: black;
+  left: 0px;
+  top: -20px;
+}
+
+
+/* For Chrome */
+
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 100%
+}
+
+input[type=range]:focus {
+  outline: none;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background: #3891AC;
+  border: 8px solid #C8E9F3;
+  cursor: pointer;
+  margin-top: -19px;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  cursor: pointer;
+  background: #CCCCCC;
+  height: 2px;
+}
+
+
+/* For Mozilla */
+
+input[type=range]::-moz-range-thumb {
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  background: #3891AC;
+  border: 8px solid #C8E9F3;
+  cursor: pointer;
+}
+
+input[type=range]::-moz-range-track {
+  width: 100%;
+  cursor: pointer;
+  background: #CCCCCC;
+  height: 2px;
+}
+
+
+/* For IE */
+
+input[type=range]::-ms-thumb {
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  background: #3891AC;
+  border: 8px solid #C8E9F3;
+  cursor: pointer;
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 2px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  border-width: 20px 0;
+  color: transparent;
+}
+
+input[type=range]::-ms-fill-lower {
+  background: #CCCCCC;
+  height: 2px;
+}
+
+input[type=range]::-ms-fill-upper {
+  background: #CCCCCC;
+  height: 2px;
+}
+
+input[type=range]::-ms-tooltip {
+  display: none;
+}

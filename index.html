@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="slider.css">
+  <script type="text/javascript" src="slider.js"></script>
+</head>
+
+<body>
+  <div style="display: flex;">
+    <div id="result" style="background: #4267B2;padding: 10px 20px;color: white;font-size: 25px;margin: 0 auto 50px auto;border-radius: 10px;"></div>
+  </div>
+  <div class="slider-container">
+    <input type="range" min="150000" max="5000000" data-change="calculation" />
+  </div>
+  <script>
+    function calculation(value) {
+      var savings = 0,
+        price = parseFloat(value);
+
+      if (price > 250000) {
+        savings = .0125 * price;
+      }
+      else if (price > 200000) {
+        savings = .0075 * price; 
+      } else {
+        savings = 500;
+      }
+      
+      document.getElementById("result").innerHTML = savings.toLocaleString('en-US', {
+        style: 'currency',
+        currency: 'USD'
+      });
+    }
+  </script>
+</body>
+</html>
